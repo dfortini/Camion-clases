@@ -1,0 +1,19 @@
+import cosas.*
+import camion.*
+
+describe "Cosas"{
+	const paqueteDeLadrillos = new PaqueteDeLadrillos()
+	const camion = new Camion()
+	
+	test "Paquete de ladrillos agrega 12 ladrillos al ser cargado" {
+		//const paqueteDeLadrillos2 = new PaqueteDeLadrillos()
+	
+		camion.cargar(paqueteDeLadrillos)
+		assert.equals(#{paqueteDeLadrillos}, camion.carga())
+		assert.equals(12, paqueteDeLadrillos.ladrillos())
+		
+		//assert.equals(12, paqueteDeLadrillos2.ladrillos())
+	}
+	
+}
+	
